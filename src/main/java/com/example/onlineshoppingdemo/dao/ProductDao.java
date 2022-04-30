@@ -1,0 +1,17 @@
+package com.example.onlineshoppingdemo.dao;
+
+import com.example.onlineshoppingdemo.ds.Category;
+import com.example.onlineshoppingdemo.ds.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface ProductDao extends JpaRepository<Product,Integer> {
+
+    List<Product> findAllByCategoryId(int id);
+
+
+
+}
